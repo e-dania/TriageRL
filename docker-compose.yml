@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      TRIAGERL_DB: /data/triagerl.db
+    volumes:
+      - ./models:/app/models   # trained DQN model
+      - db-data:/data          # persist SQLite database
+
+volumes:
+  db-data:
