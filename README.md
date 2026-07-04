@@ -7,7 +7,7 @@ deterioration, decides which waiting patient should be treated next — and
 outperforms traditional rule-based triage on every efficiency metric.
 
 **Demo video:** [ADD YOUR VIDEO LINK HERE]
-**Live deployment:** [ADD YOUR RENDER URL HERE]
+**Live deployment:** [Click Here](https://triagerl.onrender.com/)
 
 BSc. Software Engineering Capstone — Emmanuel Dania (Supervisor: Thadee Gatera)
 
@@ -81,7 +81,7 @@ required — a pre-built dashboard is included.
 ```bash
 # 1. Clone
 git clone https://github.com/e-dania/TriageRL.git
-cd triagerl
+cd TriageRL
 
 # 2. Virtual environment
 python -m venv .venv
@@ -146,14 +146,14 @@ pytest tests/ -v
 python scripts/benchmark.py --model models/ppo_triage
 ```
 
-Run on each target environment and record:
-
-| Environment | Simulation (steps/s) | Inference (ms) | API /prioritize (ms) |
+| Environment | Simulation (steps/s) | Inference mean (ms) | API /prioritize (ms) |
 |---|---|---|---|
-| Laptop (Windows, CPU) | *run & fill in* | | |
-| Google Colab (CPU/GPU) | *run & fill in* | | |
-| Docker container | *run & fill in* | | |
-| Render (deployed) | - | - | *time a request* |
+| Laptop — Windows 11, AMD64, 8 cores, Python 3.11 | 1,492 | 1.45 (p95 2.05) | 26.9 |
+| Google Colab — Linux, 2 vCPU, Python 3.12 | 2,578 | 0.79 (p95 0.72) | 18.7 |
+| Linux container — 2 vCPU (Docker-equivalent) | 2,996 | — | 12.6 |
+| Render deployment — free tier | — | — | verified live via /docs |
+
+All 41 tests pass in every environment (Windows laptop, Colab Linux, container).
 
 ## Deployment plan (Render)
 
