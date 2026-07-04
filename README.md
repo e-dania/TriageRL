@@ -6,10 +6,10 @@ simulated ED with stochastic arrivals, limited beds/staff, and patient
 deterioration, decides which waiting patient should be treated next — and
 outperforms traditional rule-based triage on every efficiency metric.
 
-**Demo video:** [ADD YOUR VIDEO LINK HERE]
+**Demo video:** [Click Here](https://drive.google.com/file/d/1xKa9FgESG11B0YHXsIxKq-Z9JYoKZOs_/view?usp=sharing)
 **Live deployment:** [Click Here](https://triagerl.onrender.com/)
 
-BSc. Software Engineering Capstone — Emmanuel Dania (Supervisor: Thadee Gatera)
+BSc. Software Engineering Capstone — Emmanuel Dania (Supervisor: Thadee Gatera  & Junior Turatsinze)
 
 ---
 
@@ -187,9 +187,6 @@ cost of the worst critical waits — the agent learns a middle path.
 
 ## Recommendations & future work
 
-- Validate on real ED data (e.g., MIMIC-IV-ED) before any clinical use; the
-  current system is simulation-trained and is a decision-support prototype,
-  not a medical device.
 - Multi-hospital transfer: retrain per-site with local arrival patterns and
   resource levels (all configurable in `ed_env.py`).
 - Extend the action space to resource assignment (which bed/clinician), not
